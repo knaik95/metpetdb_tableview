@@ -2,19 +2,17 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<title>Demo</title>
+		<title>MetPetDB Demo</title>
+		<link rel="stylesheet" href="theming.css">
+		<script type="text/javascript" src="TableView.js" ></script>
 	</head>
 	<body>
-		<a href="http://jquery.com/">jQuery</a>
-		<script src="jquery.js"></script>
-		<script>
-			var a = {};
-			$.getJSON('minerals.json', function(data){
-				a = data;
-				$.each(a, function(idx, rock){
-					$('table#t TBODY').append('<tr><td>'+rock.name+'</td><td>'+rock.symbol +'</td><td>'+rock.atomic_number +'</td></tr>'+rock.weight +'</td></tr>');
-				});
-			});
-		</script>
+		<table id="personDataTable">
+		    <tr>
+		        <th>ID</th>
+		        <th>Element Name</th>
+		        <th>Atomic Number</th>
+		    </tr>
+		</table>
 	</body>
 </html>
