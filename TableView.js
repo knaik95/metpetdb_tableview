@@ -4,19 +4,11 @@ $.ajax({
     dataType: "json",
     data: {
         json: JSON.stringify([
-            {
-            id: 1,
-            elementName: "Germanium",
-            atomicNumber: "13"},
-        {
-            id: 2,
-            elementName: "Uranium",
-            atomicNumber: "92"}
-        ]),
+        {id: 1, elementName: "Germanium", atomicNumber: 13},
+        {id: 2, elementName: "Uranium", atomicNumber: 92}]),
         delay: 3
     },
     success: function(data, textStatus, jqXHR){
-        // since we are using jQuery, you don't need to parse response
         drawTable(data);
     }
 });
@@ -28,8 +20,12 @@ function drawTable(data){
 
 function drawRow(rowData){
     var row = $("<tr />")
-    $("#personDataTable").append(row); //this will append tr element to table... keep its reference for a while since we will add cels into it
+    $("#testTable").append(row);
     row.append($("<td>" + rowData.id + "</td>"));
-    row.append($("<td>" + rowData.rockType + "</td>"));
+    row.append($("<td>" + rowData.elementName + "</td>"));
     row.append($("<td>" + rowData.atomicNumber + "</td>"));
+}
+
+function init(){
+	drawTable(data);
 }

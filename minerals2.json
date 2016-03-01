@@ -1,0 +1,26 @@
+{
+	"records": [
+		{
+			"number": "test001",
+			"owner": "Sibel Adali",
+			"type": "Quartzite",
+		},
+		{
+			"number": "test002",
+			"owner": "Sibel Adali",
+			"type": "Amphibolite",
+		},
+		{
+			"number": "test003",
+			"owner": "Sibel Adali",
+			"type": "Schist",
+		},
+		{
+			"number": "test004",
+			"owner": "Sibel Adali",
+			"type": "Gneiss",
+		}
+	],
+	"queryRecordCount": 4,
+	"totalRecordCount": 4
+}
